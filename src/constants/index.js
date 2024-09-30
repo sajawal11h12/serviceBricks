@@ -71,7 +71,7 @@ export const navigation = [
   {
     id: "6",
     title: "About",
-    url: "/aboult",
+    url: "/about",
   },
   
   {

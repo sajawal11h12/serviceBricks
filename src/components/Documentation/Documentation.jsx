@@ -8,10 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Section from "../pre-component/Section";
-import { smallSphere, stars } from "../../assets";
-import Heading from "../pre-component/Heading";
-import PricingList from "../pre-component/PricingList";
-import { LeftLine, RightLine } from "../design/Pricing";
 import Button from "../pre-component/Button";
 
 function Documentation() {
@@ -62,7 +58,6 @@ Documentation
     >
   <Button>View Docmentation Repo </Button>
 </div>
-
 </div>
 
           <div className="relative z-1 mx-20 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
@@ -82,15 +77,6 @@ Documentation
               Servicebricks using AI to help you build microservices faster.
               </p>
               <ul className="body-2">
-                {/* {brainwaveServices.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start py-4 border-t border-n-6"
-                  >
-                    <img width={24} height={24} src={check} />
-                    <p className="ml-4">{item}</p>
-                  </li>
-                ))} */}
                 <ul>
   <li className="flex items-start py-4 border-t border-n-6">
     <img width={24} height={24} src={check} />
@@ -112,9 +98,10 @@ Documentation
 
               </ul>
             </div>
+        
+                  </div>
 
-          </div>
-
+        
 </Section>
 </div>
 <Footer/>
