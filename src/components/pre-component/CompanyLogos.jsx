@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { companyLogos } from "../constants";
-import mongodb from '../assets/mongodb.png';
-import oracle from '../assets/oracle.png';
-import ele from '../assets/ele.png';
-import sql from '../assets/sql.png';
-import sqllite from '../assets/sqllite.png';
+import { companyLogos } from "../../constants";
+import mongodb from '../../assets/mongodb.png';
+import oracle from '../../assets/oracle.png';
+import ele from '../../assets/ele.png';
+import sql from '../../assets/sql.png';
+import sqllite from '../../assets/sqllite.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

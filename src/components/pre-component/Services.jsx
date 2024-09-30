@@ -1,15 +1,15 @@
 import Section from "./Section";
 import Heading from "./Heading";
-import { service1, service2, service3, check } from "../assets";
-import AI from '../assets/AI.png'
+import { service1, service2, service3, check } from "../../assets";
+import AI from '../../assets/AI.png'
 
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+import { brainwaveServices, brainwaveServicesIcons } from "../../constants";
 import {
   PhotoChatMessage,
   Gradient,
   VideoBar,
   VideoChatMessage,
-} from "./design/Services";
+} from "../design/Services";
 
 import Generating from "./Generating";
 

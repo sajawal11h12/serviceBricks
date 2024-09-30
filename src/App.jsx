@@ -1,30 +1,27 @@
-import ButtonGradient from "./assets/svg/ButtonGradient";
-import Benefits from "./components/Benefits";
-import Collaboration from "./components/Collaboration";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
-import Services from "./components/Services";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop.jsx';
+import Home from './components/Home/Home';
+import Feature from './components/Features/Feature';
+import Documentation from './components/Documentation/Documentation';
+import Consulting from './components/Consulting/Consulting';
+import About from './components/About/About';
 
-const App = () => {
+function App() {
   return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <Hero />
-        <Benefits />
-        <Collaboration />
-        <Services />
-        <Pricing />
-        <Roadmap />
-        <Footer />
-      </div>
-
-      <ButtonGradient />
-    </>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="features" element={<Feature />} />
+        <Route path="documentation" element={<Documentation />} />
+        <Route path="consulting" element={<Consulting />} />
+        <Route path="about" element={<About />} />
+        {/* Redirect from root path to Home */}
+        <Route path="/" element={<Navigate replace to="/home" />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
