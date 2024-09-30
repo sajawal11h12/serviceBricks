@@ -2,6 +2,7 @@ import Section from "./Section";
 import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
 import AI from '../assets/AI.png'
+import services from '../assets/services.png'
 
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import {
@@ -30,7 +31,7 @@ const Services = () => {
                 width={800}
                 alt="Smartest AI"
                 height={730}
-                src={service1}
+                src={services}
               />
             </div>
 
