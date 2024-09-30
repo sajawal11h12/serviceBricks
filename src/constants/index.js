@@ -111,8 +111,8 @@ export const brainwaveServicesIcons = [
 export const roadmap = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
+    title: "Cache Microservice",
+    text: "Generic key/value pair data storage with an expiration process to delete expired data.",
     date: "May 2023",
     status: "done",
     imageUrl: roadmap1,
