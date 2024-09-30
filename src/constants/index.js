@@ -37,36 +37,53 @@ import {
 } from "../assets";
 
 export const navigation = [
+  
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "Home",
+    url: "/",
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Features",
+    url: "/features",
   },
   {
     id: "2",
-    title: "Get Started",
-    url: "#how-to-use",
+    title: "Pricing",
+    url: "/pricing",
   },
   {
     id: "3",
-    title: "Documentation",
-    url: "#roadmap",
+    title: "Get Started",
+    url: "/get-started",
   },
   {
     id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
+    title: "Documentation",
+    url: "/documentation",
   },
   {
     id: "5",
+    title: "Consulting",
+    url: "/consulting",
+  },
+  {
+    id: "6",
+    title: "About",
+    url: "/aboult",
+  },
+  
+  {
+    id: "7",
+    title: "New account",
+    url: "/signup",
+    onlyMobile: true,
+  },
+  {
+    id: "8",
     title: "Sign in",
-    url: "#login",
+    url: "/login",
     onlyMobile: true,
   },
 ];
