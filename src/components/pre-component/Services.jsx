@@ -1,6 +1,6 @@
 import Section from "./Section";
 import Heading from "./Heading";
-import service4 from '../assets/service4.png'
+import service4 from '../../assets/service4.png'
 import { service1, service2, service3, check } from "../../assets";
 import AI from '../../assets/AI.png'
 
