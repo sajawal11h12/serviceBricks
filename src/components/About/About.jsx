@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import ButtonGradient from "../../assets/svg/ButtonGradient";
 import { service1, service2, service3, check } from "../../assets";
-import micro from "../../assets/services/documentation.webp";
+import micro from "../../assets/HoloLogo.png";
 import micro1 from "../../assets/micro.jpg";
 import Heading from "../pre-component/Heading";
 import { GradientLight } from "../design/Benefits";
 import ClipPath from "../../assets/svg/ClipPath";
 
 import AOS from "aos";
-import "aos/dist/aos.css";import Header from '../Header/Header'
+import "aos/dist/aos.css";
+import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Section from "../pre-component/Section";
 import Button from "../pre-component/Button";
@@ -29,7 +30,7 @@ function About() {
     
     <Header />
 
-    <div className="absolute top-0  w-full aspect-square bg-radial-gradient from-[#28206C] to-[#28206C]/0 to-70% pointer-events-none" />
+    <div className="absolute top-0  w-full aspect-square bg-radial-gradient from-[#341947] to-[#28206C]/0 to-70% pointer-events-none" />
   
     <Section
     className="pt-[5rem] -mt-[5.25rem]"
@@ -96,43 +97,46 @@ function About() {
       
     </div>
 
-{/*     
-    <div className="flex items-center justify-center min-h-screen ">
-      <div className="max-w-2xl w-full p-8  shadow-xl rounded-lg transition-transform transform hover:scale-105">
-        <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-6">Impressum</h1>
+    
+      <div className=" mx-24 border-t-2 border-gray-700" >
+        <h1 className="text-3xl font-extrabold text-center pt-4 text-gray-100 ">Impressum</h1>
         
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-700">Company:</h2>
-          <p className="text-gray-600">HoloModular LLC</p>
+        <div className="flex  justify-between items-start">
+        <div className="mb-6 flex flex-col items-center justify-start">
+          <img src={micro} alt="logo" className="h-14 w-auto" />
+          <h2 className="text-xl font-semibold text-gray-200">Company:</h2>
+          <p className="text-gray-300">HoloModular LLC</p>
         </div>
         
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-700">Corporate Address:</h2>
-          <p className="text-gray-600">5620 Crest Creek Dr</p>
-          <p className="text-gray-600">Jacksonville, FL 32258</p>
+        <div className="mb-6 mt-15">
+          <h2 className="text-xl font-semibold text-gray-200">Corporate Address:</h2>
+          <p className="text-gray-300">5620 Crest Creek Dr</p>
+          <p className="text-gray-300">Jacksonville, FL 32258</p>
         </div>
         
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-700">Contact:</h2>
-          <p className="text-gray-600">
+        <div className="mb-6 mt-15">
+          <h2 className="text-xl font-semibold text-gray-200">Contact:</h2>
+          <p className="text-gray-300">
             Email: <a href="mailto:Support@HoloModular.com" className="text-purple-600 hover:underline">Support@HoloModular.com</a>
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-300">
             Website: <a href="https://HoloModular.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">HoloModular.com</a>
           </p>
         </div>
         
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-700">Company Registration:</h2>
-          <p className="text-gray-600">State of Florida, USA</p>
+        <div className="mb-6 mt-15">
+          <h2 className="text-xl font-semibold text-gray-200">Company Registration:</h2>
+          <p className="text-gray-300">State of Florida, USA</p>
         </div>
+        </div>
+        <div className="flex mx-24 justify-center items-center">
         
-        <div>
-          <h2 className="text-xl font-semibold text-gray-700">Managing Director:</h2>
-          <p className="text-gray-600">Danny Logsdon, CEO</p>
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold text-gray-200">Managing Director:</h2>
+          <p className="text-gray-300">Danny Logsdon, CEO</p>
         </div>
+</div>
       </div>
-    </div>             */}
 
      
 

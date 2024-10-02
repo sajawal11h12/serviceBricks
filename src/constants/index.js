@@ -64,7 +64,7 @@ export const navigation = [
   {
     id: "3",
     title: "Get Started",
-    url: "/get-started",
+    url: "/getstarted",
   },
   {
     id: "4",

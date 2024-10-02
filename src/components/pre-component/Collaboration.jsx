@@ -1,11 +1,12 @@
 import { brainwaveSymbol, check, service2 } from "../../assets";
 import { collabApps, collabContent, collabText } from "../../constants";
+import brickslogomini from '../../assets/brickslogomini.png'
+import { LeftCurve, RightCurve } from "../design/Collaboration";
+
 import Button from "./Button";
 import Section from "./Section";
-import { LeftCurve, RightCurve } from "../design/Collaboration";
 import AOS from 'aos'; // Import AOS
 import { useEffect } from 'react'; // Import useEffect
-import brickslogomini from '../../assets/brickslogomini.png'
 const Collaboration = () => {
   useEffect(() => {
     AOS.init({

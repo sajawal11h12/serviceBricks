@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ButtonGradient from "../../assets/svg/ButtonGradient";
 import { service1, service2, service3, check } from "../../assets";
 import micro from "../../assets/services/documentation.webp";
-import micro1 from "../../assets/micro.jpg";
+import micro1 from "../../assets/concept.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";import Header from '../Header/Header'

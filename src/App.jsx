@@ -8,7 +8,7 @@ import Consulting from './components/Consulting/Consulting';
 import About from './components/About/About';
 import Signup from './components/Signup/Signup.jsx';
 import Register from './components/Signin/Signin.jsx';
-
+import GetStarted from './components/Get-Started/GetStarted.jsx';
 import Price from './components/Price/Price.jsx'
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         <Route path='signup' element={<Signup/>}/>
         <Route path='login' element={<Register/>}/>
         <Route path="price" element={<Price />} />
+        <Route path="getstarted" element={<GetStarted />} />
 
         {/* Redirect from root path to Home */}
         <Route path="/" element={<Navigate replace to="/home" />} />
