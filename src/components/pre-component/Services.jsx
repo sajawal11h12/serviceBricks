@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import service4 from '../../assets/service4.png'
 import { service1, service2, service3, check } from "../../assets";
 import AI from '../../assets/AI.png'
-
+import colab3 from '../../assets/colab3.jpg'
 import { brainwaveServices, brainwaveServicesIcons } from "../../constants";
 import {
   PhotoChatMessage,
@@ -131,8 +131,8 @@ const Services = () => {
 
               <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
                 <img
-                  src={service3}
-                  className="w-full h-full object-cover blur-md" 
+                  src={colab3}
+                  className="w-full h-full object-cover " 
                   width={520}
                   height={400}
                   alt="Scary robot"

@@ -9,7 +9,6 @@ import {
   discord,
   discordBlack,
   facebook,
-  figma,
   file02,
   framer,
   homeSmile,
@@ -24,9 +23,7 @@ import {
   raindrop,
   recording01,
   recording03,
-  roadmap1,
   roadmap2,
-  roadmap3,
   roadmap4,
   searchMd,
   slack,
@@ -35,6 +32,17 @@ import {
   twitter,
   yourlogo,
 } from "../assets";
+import roadmap1 from '../assets/roadmap1.png'
+import roadmap3 from '../assets/roadmap3.png'
+
+import sqlicon from '../assets/sqlicon.png'
+import comosicon from '../assets/comosicon.png'
+import storageicon from '../assets/storageicon.png'
+import mongodbicon from '../assets/mongodbicon.png'
+import netcoreicon from '../assets/netcoreicon.png'
+import postsqlicon from '../assets/postsqlicon.png'
+import sqlservericon from '../assets/sqlservericon.png'
+import sqllite from '../assets/sqllite.png'
 
 export const navigation = [
   
@@ -120,27 +128,27 @@ export const roadmap = [
   },
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
+    title: "Logging Microservice",
+    text: "Service-scoped or centralized application logging with web request and response auditing.",
     date: "May 2023",
     status: "progress",
     imageUrl: roadmap2,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
+    title: " Notification Microservice",
+    text: "Notification and delivery of emails and SMS messages",
     date: "May 2023",
     status: "done",
     imageUrl: roadmap3,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
+    title: "  Security Microservice",
+    text: "Authentication, authorization, and application security with JWT bearer token support for multi-application deployments.",
     date: "May 2023",
     status: "progress",
-    imageUrl: roadmap4,
+    imageUrl: roadmap3,
   },
 ];
 
@@ -166,49 +174,49 @@ export const collabApps = [
   {
     id: "0",
     title: "Figma",
-    icon: figma,
+    icon: sqlicon,
     width: 26,
     height: 36,
   },
   {
     id: "1",
     title: "Notion",
-    icon: notion,
+    icon: comosicon,
     width: 34,
     height: 36,
   },
   {
     id: "2",
     title: "Discord",
-    icon: discord,
+    icon: storageicon,
     width: 36,
     height: 28,
   },
   {
     id: "3",
     title: "Slack",
-    icon: slack,
+    icon: mongodbicon,
     width: 34,
     height: 35,
   },
   {
     id: "4",
-    title: "Photoshop",
-    icon: photoshop,
+    title: "netcoreicon",
+    icon: netcoreicon,
     width: 34,
     height: 34,
   },
   {
     id: "5",
     title: "Protopie",
-    icon: protopie,
+    icon: postsqlicon,
     width: 34,
     height: 34,
   },
   {
     id: "6",
     title: "Framer",
-    icon: framer,
+    icon: sqllite,
     width: 26,
     height: 34,
   },
@@ -268,7 +276,7 @@ export const benefits = [
   },
   {
     id: "1",
-    title: " ServiceQuery",
+    title: "ServiceQuery",
     text: "Supports standardized, polyglot data querying for SQL and NoSQL databases.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
@@ -277,7 +285,7 @@ export const benefits = [
   },
   {
     id: "2",
-    title: " Business Rule Engine",
+    title: "Business Rule Engine",
     text: "Business Rule Engine: Polymorphic techniques to build reusable business logic.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
@@ -285,7 +293,7 @@ export const benefits = [
   },
   {
     id: "3",
-    title: "Domain-Driven Design ",
+    title: "Domain-Driven Design",
     text: "Domain-Driven Design concepts, standards and patterns.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
@@ -302,13 +310,65 @@ export const benefits = [
   },
   {
     id: "5",
-    title: "Classic or Modern API Design ",
+    title: "Classic or Modern API Design",
     text: "Choose between Classic or Modern modes, with various response formats.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
   },
+  {
+    id: "6",
+    title: "Microservices Architecture",
+    text: "Break down applications into smaller, manageable services that can be developed and deployed independently.",
+    backgroundUrl: "./src/assets/benefits/card-7.svg",
+    iconUrl: benefitIcon3,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "7",
+    title: "CI/CD Integration",
+    text: "Continuous Integration and Continuous Deployment capabilities for smoother updates and releases.",
+    backgroundUrl: "./src/assets/benefits/card-8.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "8",
+    title: "Scalable Solutions",
+    text: "Easily scalable services that grow with your business needs.",
+    backgroundUrl: "./src/assets/benefits/card-9.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "9",
+    title: "Monitoring and Logging",
+    text: "Integrated monitoring and logging for better performance and error tracking.",
+    backgroundUrl: "./src/assets/benefits/card-10.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "10",
+    title: "Multi-Tenant Architecture",
+    text: "Support for multiple tenants within a single application instance, optimizing resource usage.",
+    backgroundUrl: "./src/assets/benefits/card-11.svg",
+    iconUrl: benefitIcon3,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "11",
+    title: "API Gateway",
+    text: "A single entry point for managing and securing APIs with enhanced performance.",
+    backgroundUrl: "./src/assets/benefits/card-12.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    light: true,
+  },
 ];
+
 
 export const socials = [
   {
