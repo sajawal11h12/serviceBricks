@@ -3,6 +3,7 @@ import ButtonGradient from "../../assets/svg/ButtonGradient";
 import { service1, service2, service3, check } from "../../assets";
 import micro from "../../assets/services/documentation.webp";
 import micro1 from "../../assets/concept.jpg";
+import { smallSphere, stars } from "../../assets";
 
 import AOS from "aos";
 import "aos/dist/aos.css";import Header from '../Header/Header'
@@ -32,6 +33,16 @@ customPaddings
 id="hero"
 >
   <div className="relative z-1 max-w-[62rem]  mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+  <div className="absolute top-1/2 left-1/2 w-[60rem] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+            <img
+              src={stars}
+              className="w-full"
+              width={950}
+              height={400}
+              alt="Stars"
+            />
+          </div>
+      
     <h1
       className="h1 mb-6 text-[40px]"
       data-aos="fade-left" // Changed AOS animation type

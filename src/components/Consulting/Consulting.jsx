@@ -7,7 +7,9 @@ import Footer from '../Footer/Footer'
 import Section from "../pre-component/Section";
 import Button from "../pre-component/Button";
 import Heading from "../pre-component/Heading";
-
+import service from '../../assets/services1.json'; // Assuming the correct path to the Lottie file
+import { Player } from '@lottiefiles/react-lottie-player';
+import line from '../../assets/benefits/Bg.png'
 function Consulting() {
   useEffect(() => {
     AOS.init({
@@ -37,6 +39,7 @@ id="hero"
       data-aos-duration="1000" // Optional duration for the h1
     >
 Consulting Services    </h1>
+
     <p 
       className=" mb-6 text-lg"
       data-aos="fade-up" // Changed AOS animation type
@@ -48,7 +51,8 @@ Consulting Services    </h1>
 
     </p>
     <div className="flex  justify-center items-center my-8"
-    >
+      
+      >
   <p className="w-1/2  text-justify flex self-start mx-10" 
           data-aos="fade-right" // Changed AOS animation type
           data-aos-delay="7000" // Optional delay for the h1
