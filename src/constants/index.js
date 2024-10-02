@@ -43,6 +43,7 @@ import netcoreicon from '../assets/netcoreicon.png'
 import postsqlicon from '../assets/postsqlicon.png'
 import sqlservericon from '../assets/sqlservericon.png'
 import sqllite from '../assets/sqllite.png'
+import inmemory from '../assets/inmemory.png'
 
 export const navigation = [
   
@@ -209,7 +210,7 @@ export const collabApps = [
   {
     id: "5",
     title: "Protopie",
-    icon: postsqlicon,
+    icon: inmemory,
     width: 34,
     height: 34,
   },
