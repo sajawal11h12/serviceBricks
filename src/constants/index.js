@@ -59,7 +59,7 @@ export const navigation = [
   {
     id: "2",
     title: "Pricing",
-    url: "/pricing",
+    url: "/price",
   },
   {
     id: "3",
@@ -79,7 +79,7 @@ export const navigation = [
   {
     id: "6",
     title: "About",
-    url: "/aboult",
+    url: "/about",
   },
   
   {
