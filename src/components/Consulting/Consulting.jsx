@@ -49,14 +49,14 @@ Consulting Services    </h1>
     </p>
     <div className="flex  justify-center items-center my-8"
     >
-  <p className="w-1/2  flex self-start mx-10" 
+  <p className="w-1/2  text-justify flex self-start mx-10" 
           data-aos="fade-right" // Changed AOS animation type
           data-aos-delay="7000" // Optional delay for the h1
           data-aos-duration="1000" // Optional duration for the h1
            >
   Our expert consultants work closely with your team to understand your unique challenges and goals, providing tailored solutions that streamline development, enhance scalability, and improve overall efficiency. Whether you're looking to optimize existing systems or implement new microservices from the ground up, we provide the expertise and support you need.
   </p>
-  <p className="w-1/2  flex self-start mx-10" data-aos="fade-left" // Changed AOS animation type
+  <p className="w-1/2  text-justify flex self-start mx-10" data-aos="fade-left" // Changed AOS animation type
           data-aos-delay="7000" // Optional delay for the h1
           data-aos-duration="1000" // Optional duration for the h1
           >
