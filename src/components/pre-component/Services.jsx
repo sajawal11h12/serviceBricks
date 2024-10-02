@@ -68,7 +68,7 @@ const Services = () => {
                 />
               </div>
 
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
+              <div className="absolute inset-0 flex flex-col justify-end p-12 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Architectural Excellence</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
                 We provide the core architectural patterns, implementation, standardization, and governance for your microservices foundation.

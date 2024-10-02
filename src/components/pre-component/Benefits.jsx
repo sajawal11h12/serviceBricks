@@ -29,6 +29,9 @@ const Benefits = () => {
     };
   }, []);
 
+  // Slice the benefits array to show only 6 cards
+  const limitedBenefits = benefits.slice(0, 6);
+
   return (
     <Section id="features">
       <p className="font-bold text-center text-[60px]">Our Advance Features</p>
@@ -38,7 +41,7 @@ const Benefits = () => {
         </h1>
 
         <div className="flex flex-wrap gap-10 mb-10">
-          {benefits.map((item) => (
+          {limitedBenefits.map((item) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
