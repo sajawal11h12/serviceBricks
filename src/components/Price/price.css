@@ -1,0 +1,38 @@
+/* Responsive styles for small screens */
+@media (max-width: 640px) {
+    .responsive-table {
+      display: block;
+      overflow-x: auto; /* Allow horizontal scrolling */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+  
+    .responsive-table table {
+      width: 100%; /* Full width */
+      min-width: 600px; /* Adjust based on your content */
+      border-collapse: collapse; /* Collapse borders for cleaner look */
+    }
+  
+    th, td {
+      display: block; /* Stack table cells vertically */
+      text-align: left; /* Align text to the left */
+    }
+  
+    th {
+      position: absolute; /* Position header cells absolutely */
+      left: -9999px; /* Hide them visually */
+    }
+  
+    td {
+      padding: 10px; /* Adjust padding */
+      position: relative; /* Position relative for data-label */
+    }
+  
+    td::before {
+      content: attr(data-label); /* Show the header as a label */
+      position: absolute; 
+      left: 10px; /* Positioning */
+      font-weight: bold; /* Bold for clarity */
+      text-transform: uppercase; /* Make labels uppercase */
+    }
+  }
+  

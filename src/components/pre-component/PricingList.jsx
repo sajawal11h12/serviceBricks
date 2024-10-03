@@ -12,15 +12,15 @@ const PricingList = () => {
         >
           <h4 className="h4 mb-4  text-[#db89db88]">{item.title}</h4>
 
-          <p className="body-2 min-h-[4rem] mb-3 text-n-1/50">
+          <p className="body-2 min-h-[1.5rem] sm:min-h-[1.5rem] md:min-h-[4rem] mb-3 text-n-1/50">
             {item.description}
           </p>
 
-          <div className="flex items-center h-[5.5rem] mb-6">
+          <div className="flex items-center h-[3rem] sm:h-[3.2rem] md:h-[5.5rem] mb-6">
             {item.price && (
               <>
-                <div className="h3">$</div>
-                <div className="text-[5.5rem] leading-none font-bold">
+                <div className="md:h3">$</div>
+                <div className=" text-[3rem] sm:text-[3rem] md:text-[5.5rem] leading-none font-bold">
                   {item.price}
                 </div>
               </>
