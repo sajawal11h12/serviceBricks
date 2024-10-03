@@ -395,7 +395,7 @@ function GetStarted() {
   
   
   
-  
+{/*   
    
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
@@ -491,9 +491,114 @@ function GetStarted() {
             <LeftCurve />
             <RightCurve />
           </div>
+   
+   
+   
+   
+   
+   
         </div>
       </div>
-   
+    */}
+
+      <div className="container lg:flex">
+        <div className="max-w-[25rem]">
+          <h2 className="h2 mb-4 md:mb-8" data-aos="fade-right">
+          Database Providers Supported
+          </h2>
+
+          <ul className="max-w-[22rem] mb-10 md:mb-14">
+          <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Azure Data Tables</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Azure Cosmos DB</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Azure Sql</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Entity Framework Core</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">In Memory</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Microsoft Sql Server</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">MongoDB</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Postgres</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">Sqlite</p>
+  </li>
+  <li className="flex items-start py-4 border-t border-n-6">
+    <img width={24} height={24} src={check} />
+    <p className="ml-4">More to come!</p>
+  </li>
+          </ul>
+          <Button data-aos="fade-right">Try it now</Button>
+        </div>
+
+        <div className="lg:ml-auto xl:w-[38rem] mt-4" data-aos="fade-left">
+          <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+          Exposes a storage platform-agnostic model and repository-based API, supporting both relational (SQL) and document (NoSQL) databases. Switch storage providers without impacting microservice operations.
+          </p>
+
+          <div className="relative left-1/2 flex w-[17rem] md:w-[20rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale-75 md:scale-100">
+
+            <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
+              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+                  <img
+                    src={brickslogomini}
+                    width={50}
+                    height={50}
+                    alt="brainwave"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <ul>
+              {collabApps.map((app, index) => (
+                <li
+                  key={app.id}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45}`}
+                >
+                  <div
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index * 45}`}
+                  >
+                    <img
+                      className="m-auto"
+                      width={app.width}
+                      height={app.height}
+                      alt={app.title}
+                      src={app.icon}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <LeftCurve />
+            <RightCurve />
+          </div>
+        </div>
+      </div>
+
 
 
 

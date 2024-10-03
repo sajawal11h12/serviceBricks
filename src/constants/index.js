@@ -135,22 +135,17 @@ export const roadmap = [
     status: "progress",
     imageUrl: roadmap2,
   },
-  {
-    id: "2",
-    title: " Notification Microservice",
-    text: "Notification and delivery of emails and SMS messages",
-    date: "May 2023",
-    status: "done",
-    imageUrl: roadmap3,
-  },
-  {
+ {
     id: "3",
     title: "  Security Microservice",
     text: "Authentication, authorization, and application security with JWT bearer token support for multi-application deployments.",
     date: "May 2023",
     status: "progress",
     imageUrl: roadmap3,
+
+
   },
+ 
 ];
 
 export const collabText =

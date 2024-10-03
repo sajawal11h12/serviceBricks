@@ -79,45 +79,9 @@ Documentation
     >
   <Button>View Docmentation Repo </Button>
 </div>
-</div>
 
-          <div className="relative z-1 mx-20 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
-              <img
-                className= " w-800px h-full  object-cover  md:object-right"
-                width={800}
-                alt="Smartest AI"
-                height={730}
-                src={micro1}
-              />
-</div>
 
-            <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Build Your Own Microservices</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-              Servicebricks using AI to help you build microservices faster.
-              </p>
-              <ul className="body-2">
-                <ul>
-  <li className="flex items-start py-4 border-t border-n-6">
-    <img width={24} height={24} src={check} />
-    <p className="ml-4">Explore our pre-built microservices to kickstart your project.</p>
-  </li>
-  <li className="flex items-start py-4 border-t border-n-6">
-    <img width={24} height={24} src={check} />
-    <p className="ml-4">Access comprehensive online documentation for guidance.</p>
-  </li>
-  <li className="flex items-start py-4 border-t border-n-6">
-    <img width={24} height={24} src={check} />
-    <p className="ml-4">Start developing your own microservices easily.</p>
-  </li>
-  <li className="flex items-start py-4 border-t border-n-6">
-    <img width={24} height={24} src={check} />
-    <p className="ml-4">Enhance your applications with our tools today.</p>
-  </li>
-</ul>
-
-              </ul>   </div>
+       
 
             <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
   <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
