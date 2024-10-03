@@ -157,9 +157,9 @@ const Signup = () => {
               {/* Submit Button */}
               <div className="flex justify-center">
                 <Button
-                  className="w-40 text-[#534f4f] "
+                  className="w-40 "
                 >
-                  Sign Up
+                 <span className='text-black'> Sign Up</span>
                 </Button>
               </div>
             </form>

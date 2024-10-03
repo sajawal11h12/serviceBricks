@@ -31,9 +31,10 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]  ">
           <h1
-            className="h1 mb-6 text-[50px]"
+            className="h1 mb-6 text-[35px] sm:text-[50px]  md:text-[50px]  lg:text-[50px]"
+
             data-aos="fade-left" // Changed AOS animation type
             data-aos-delay="7000" // Optional delay for the h1
             data-aos-duration="1000" // Optional duration for the h1

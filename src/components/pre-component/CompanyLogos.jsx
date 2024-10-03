@@ -18,17 +18,18 @@ const CompanyLogos = ({ className }) => {
 
   return (
     <div className={className}>
-      <div className="bg-[#00000065] h-40 flex items-center justify-around w-full rounded-3xl p-4" data-aos="fade-up">
-        <h1 className="text-left text-3xl font-bolder font-mono">
-          Open Source
-        </h1>
+     <div className="bg-[#00000065] h-auto sm:h-40 flex flex-col sm:flex-row items-center justify-between w-full rounded-3xl p-4" data-aos="fade-up">
+  <h1 className="text-left text-2xl sm:text-3xl font-bold font-mono">
+    Open Source
+  </h1>
 
-        <div className="h-32 w-[1px] bg-[#7f31a3] mx-4"></div> {/* Vertical line */}
-        
-        <h5 className="text-[#ffffff6c] text-center">
-          ServiceBricks is FREE to use for commercial purposes.<br /> It is available under the MIT license.
-        </h5>
-      </div>
+  <div className="hidden sm:block h-32 w-[1px] bg-[#7f31a3] mx-4"></div> {/* Vertical line only visible on larger screens */}
+
+  <h5 className="text-[#ffffff6c] text-center mt-4 sm:mt-0 text-sm sm:text-base">
+    ServiceBricks is FREE to use for commercial purposes.<br /> It is available under the MIT license.
+  </h5>
+</div>
+
 
       <div className="flex mt-28 justify-around items-center">
         <img src={mongodb} width={134} height={28} alt="MongoDB Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
