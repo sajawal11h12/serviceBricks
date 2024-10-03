@@ -34,7 +34,7 @@ const Benefits = () => {
 
   return (
     <Section id="features">
-      <p className="font-bold text-center text-[60px]">Our Advance Features</p>
+      <p className="font-bold text-center text-40px sm:text-[40px]  md:text[60px] lg:text-[60px]">Our Advance Features</p>
       <div className="container relative z-2 ">
         <h1 className="text-lg text-[#ffffff86] mt-10 text-center mb-28">
           Explore Smarter, Not Harder with Servicebricks

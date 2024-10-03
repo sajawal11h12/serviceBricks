@@ -32,11 +32,11 @@ const Feature = () => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <div className="container mx-auto py-10">
-        <h1 className="text-center text-5xl p-14 font-light">Our Features</h1>
-        <div className="flex flex-wrap gap-10 justify-center">
+        <h1 className="text-center text-4xl p-14 mt-10 font-light">Our Features</h1>
+        <div className="flex flex-wrap gap-10 justify-center lg:grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {benefits.map((item) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
@@ -102,45 +102,38 @@ const Feature = () => {
           <ButtonGradient />
         </div>
 
-        <Gradient />
-
         {/* New section for Learn More About Microservices with embedded video */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 overflow-hidden">
           <h2 className="text-3xl font-bold text-[#e4e0e0] mb-4">Learn More About Microservices</h2>
           <iframe
-            width="760"
+            width="260"
             height="315"
-            src="https://www.youtube.com/embed/v64uxLwpfPg "
+            src="https://www.youtube.com/embed/v64uxLwpfPg"
             title="Learn More About Microservices"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="mx-auto " // Centering the video
+            className="mx-auto sm:w-[760px] sm:h-[350px]" // Centering the video and adjusting width/height
           ></iframe>
         </div>
 
-
-
-
         {/* New section for Building Microservices with AI */}
-<div className="bg-[#1a1a2e] text-center py-16 mt-16 rounded-lg shadow-lg">
-  <h2 className="text-4xl font-bold text-[#e4e0e0] mb-4">
-    Build Microservices Online with Artificial Intelligence
-  </h2>
-  <p className="text-lg text-[#e4e0e0] mb-8 max-w-2xl mx-auto">
-    Use our online tools to create microservices quickly and easily in just a few seconds. Try completely free!
-  </p>
-  <div className="flex justify-center gap-6">
-    <Button>
-      Register
-    </Button>
-    <Button >
-      Sign In
-    </Button>
-  </div>
-</div>
-
-
+        <div className="bg-[#1a1a2e] text-center py-16 mt-16 rounded-lg shadow-lg">
+          <h2 className="text-[20px] sm:text-[4xl] font-bold text-[#e4e0e0] mb-4">
+            Build Microservices Online with Artificial Intelligence
+          </h2>
+          <p className="text-sm sm:text-[lg] text-[#e4e0e0] mb-8 max-w-2xl mx-auto">
+            Use our online tools to create microservices quickly and easily in just a few seconds. Try completely free!
+          </p>
+          <div className="flex justify-center gap-6">
+            <Button>
+              Register
+            </Button>
+            <Button>
+              Sign In
+            </Button>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
