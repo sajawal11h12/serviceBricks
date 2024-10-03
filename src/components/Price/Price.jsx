@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import ButtonGradient from "../../assets/svg/ButtonGradient";
-
+import './price.css'; 
 import AOS from "aos";
 import "aos/dist/aos.css";import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -43,9 +43,9 @@ function Price() {
             />
           </div>
         </div>
-        <div className="relative z-1 max-w-[62rem] -mt-40 mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <div className="relative z-1 max-w-[62rem] -mt-20  md:-mt-20 lg:-mt-40  mx-10 sm:mx-10   md:mx-28 lg:mx-56 xl:mx-72 text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1
-            className="h1 mb-6 text-[40px]"
+            className="md:h1 mb-6 text-[20px] sm:text-[20px]  md:text-[40px]"
             data-aos="fade-left" // Changed AOS animation type
             data-aos-delay="7000" // Optional delay for the h1
             data-aos-duration="1000" // Optional duration for the h1
@@ -53,7 +53,8 @@ function Price() {
 Code Generation Subscription Plans
           </h1>
           <p 
-            className=" mb-6 text-sm"
+            className=" mb-6 text-sm text-justify sm:text-justify md:text-center
+            "
             data-aos="fade-left" // Changed AOS animation type
             data-aos-delay="7000" // Optional delay for the h1
             data-aos-duration="1000" // Optional duration for the h1
@@ -88,7 +89,7 @@ Code Generation Subscription Plans
       </h2>
       <div class="container  flex items-center justify-center   my-4">
       
-        <table class="   shadow-md  overflow-hidden">
+        <table class="   shadow-md  overflow-hidden ">
             <thead class="border-b">
                 <tr>
                     <th class="p-4  text-left">Feature</th>

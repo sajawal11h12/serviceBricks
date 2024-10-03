@@ -55,17 +55,15 @@ function GetStarted() {
     
     <Header />
 
-    {/* <div className="absolute top-0  w-full aspect-square bg-radial-gradient from-[#341947] to-[#28206C]/0 to-70% pointer-events-none" /> */}
-  
     <Section
     className="pt-[5rem] -mt-[5.25rem]"
     crosses
     crossesOffset="lg:translate-y-[5.25rem]"
     customPaddings
     id="features"    >
-              <div className="relative z-1 max-w-[62rem]  mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+              <div className="relative z-1 max-w-[62rem]   mx-10 sm:mx-10   md:mx-28 lg:mx-56 xl:mx-72 text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
         <h1
-          className="h1 mb-6 text-[40px]"
+          className="md:h1 mb-6 text-[20px] sm:text-[20px]  md:text-[40px]"
           data-aos="fade-left" // Changed AOS animation type
           data-aos-delay="7000" // Optional delay for the h1
           data-aos-duration="1000" // Optional duration for the h1
@@ -78,7 +76,8 @@ function GetStarted() {
 
 
         <p 
-          className=" mb-6 -mt-10 text-sm"
+          className=" mb-6 text-sm text-justify sm:text-justify md:text-center
+"
           data-aos="fade-left" // Changed AOS animation type
           data-aos-delay="7000" // Optional delay for the h1
           data-aos-duration="1000" // Optional duration for the h1
@@ -89,12 +88,12 @@ function GetStarted() {
          veiw example repo
         </Button>
 </div>
-<div className='border-2 p-8 mb-16 border-gray-600 rounded-3xl mx-28'>
+<div className='border-2 p-8 mb-16 border-gray-600 rounded-3xl mx-4 sm:mx-4 md:mx-20 lg:mx-28'>
 <div className='flex justify-center items-center flex-col'>
-    <h2 className='text-4xl text-gray-200'>
+    <h2 className=' text-2xl sm:text-2xl md:text-4xl text-gray-200'>
     Build Microservices Online with Artificial Intelligence
     </h2>
-    <p className='text-xl font-grotesk text-gray-300 mb-4'>
+    <p className='text-base sm:text-base md:text-xl font-grotesk text-gray-300 mb-4'>
     Use our online tools to create microservices quickly and easily in just a few seconds. Try completely free!
     </p>
     
@@ -104,7 +103,7 @@ function GetStarted() {
 </div>
 
 <div className='flex flex-col items-center pt-5 justify-center'>
-    <h2 className='text-2xl text-gray-200 my-2'>
+    <h2 className='text-xl sm:text-xl md:text-2xl text-gray-200 my-2'>
     Pre-Built Microservices
     </h2>
     <p className='text-sm font-extralight my-2'>
@@ -112,19 +111,18 @@ function GetStarted() {
     </p>
     
 
-    <div className='flex my-5  pt-5'>
+    <div className='flex flex-col sm:flex-col md:flex-row my-5  pt-5'>
 
 
-
-    <div
-              className="block mx-10 relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
+    {/* <div
+              className="block mx-10 relative my-5 p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
               style={style}
               data-aos="fade-up" // AOS animation attribute
             >
-              <div className="relative z-2 flex flex-col h-[250px] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5">Cache Microservice</h5> 
-                <p className="body-2 mb-6  text-n-3">Generic key/value pair data storage with an expiration process to delete expired data.</p> 
-                <div className="flex items-center mt-auto">
+              <div className="relative z-2 flex flex-col sm:w-64 lg:w-auto h-[250px] p-0 md:p-[2.4rem] pointer-events-none">
+                <h5 className="mb-1 text-lg md:text-xl md:mb-4">Cache Microservice</h5> 
+                <p className=" mb-1 lg:mb-4  text-n-3">Generic key/value pair data storage with an expiration process to delete expired data.</p> 
+                <div className="flex items-center mt-3 lg:mt-10">
                   
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     View Cache Repo
@@ -152,18 +150,19 @@ function GetStarted() {
               </div>
 
               <ClipPath /> 
-            </div>
+            </div> 
+ */}
 
 {/*                  */}
-
+{/* 
             <div
               className="block mx-10 relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
               style={style}
               data-aos="fade-up" // AOS animation attribute
             >
-              <div className="relative z-2 flex flex-col h-[250px] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5">Notification Microservice</h5> 
-                <p className="body-2 mb-6  text-n-3">Notification and delivery of emails and SMS messages.</p> 
+              <div className="relative z-2 flex flex-col sm:w-64 lg:w-auto h-[250px] p-8 md:p-[2.4rem] pointer-events-none">
+                <h5 className="mb-1 text-lg md:text-xl md:mb-4">Notification Microservice</h5> 
+                <p className="mb-1 lg:mb-4  text-n-3">Notification and delivery of emails and SMS messages.</p> 
                 <div className="flex items-center mt-auto">
                   
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
@@ -193,7 +192,7 @@ function GetStarted() {
 
               <ClipPath /> 
             </div>
-
+ */}
 </div>
 
 
@@ -201,11 +200,11 @@ function GetStarted() {
 
 
 
-<div className='flex my-5'>
+{/* <div className='flex flex-col sm:flex-col md:flex-row my-5'> */}
 
 
 
-<div
+{/* <div
           className="block mx-10 relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
           style={style}
           data-aos="fade-up" // AOS animation attribute
@@ -240,10 +239,10 @@ function GetStarted() {
           </div>
 
           <ClipPath /> 
-        </div>
+        </div> */}
 
 {/*                  */}
-
+{/* 
         <div
           className="block mx-10 relative  p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
           style={style}
@@ -279,7 +278,109 @@ function GetStarted() {
           </div>
 
           <ClipPath /> 
-        </div>
+        </div> */}
+
+{/* </div> */}
+
+<div className="flex flex-col sm:flex-col md:flex-row flex-wrap  justify-center gap-5 my-5 pt-5">
+  
+  {/* Card 1 - Cache Microservice */}
+  <div
+    className="block mx-5 relative p-0.5 bg-no-repeat bg-[length:100%_100%]  w-full sm:w-80 md:w-1/2 lg:w-[22rem]"
+    style={style}
+    data-aos="fade-up"
+  >
+    <div className="relative z-2 flex flex-col h-[250px] p-4 md:p-[2.4rem] pointer-events-none">
+      <h5 className="mb-1 text-lg md:text-xl md:mb-4">Cache Microservice</h5>
+      <p className="mb-1 lg:mb-4 text-n-3">Generic key/value pair data storage with an expiration process to delete expired data.</p>
+      <div className="flex items-center mt-3 lg:mt-10">
+        <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+          View Cache Repo
+        </p>
+        <Arrow />
+      </div>
+    </div>
+    {true && <GradientLight />}
+    <div className="absolute inset-0.5 bg-n-8" style={{ clipPath: "url(#benefits)" }}>
+      <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+        <img src={a1} width={380} height={362} className="w-full h-full object-cover" />
+      </div>
+    </div>
+    <ClipPath />
+  </div>
+
+  {/* Card 2 - Notification Microservice */}
+  <div
+    className="block mx-5 relative p-0.5 bg-no-repeat bg-[length:100%_100%] w-full sm:w-80 md:w-1/2 lg:w-[22rem]"
+    style={style}
+    data-aos="fade-up"
+  >
+    <div className="relative z-2 flex flex-col h-[250px] p-4 md:p-[2.4rem] pointer-events-none">
+      <h5 className="mb-1 text-lg md:text-xl md:mb-4">Notification Microservice</h5>
+      <p className="mb-1 lg:mb-4 text-n-3">Notification and delivery of emails and SMS messages.</p>
+      <div className="flex items-center mt-auto">
+        <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+          View Notification Repo
+        </p>
+        <Arrow />
+      </div>
+    </div>
+    {true && <GradientLight />}
+    <div className="absolute inset-0.5 bg-n-8" style={{ clipPath: "url(#benefits)" }}>
+      <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+        <img src={a3} width={380} height={362} className="w-full h-full object-cover" />
+      </div>
+    </div>
+    <ClipPath />
+  </div>
+
+  {/* Card 3 - Logging Microservice */}
+  <div
+    className="block mx-5 relative p-0.5 bg-no-repeat bg-[length:100%_100%] w-full sm:w-80 md:w-1/2 lg:w-[22rem]"
+    style={style}
+    data-aos="fade-up"
+  >
+    <div className="relative z-2 flex flex-col h-[250px] p-4 md:p-[2.4rem] pointer-events-none">
+      <h5 className="-mt-0 sm:-mt-0 md:-mt-4 lg:-mt-0 mb-1">Logging Microservice</h5>
+      <p className="mb-1 lg:mb-4 text-justify text-n-3">Service-scoped or centralized application logging with web request and response auditing.</p>
+      <div className="flex items-center mt-auto">
+        <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+          View Logging Repo
+        </p>
+        <Arrow />
+      </div>
+    </div>
+    <div className="absolute inset-0.5 bg-n-8" style={{ clipPath: "url(#benefits)" }}>
+      <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+        <img src={a2} width={380} height={362} className="w-full h-full object-cover" />
+      </div>
+    </div>
+    <ClipPath />
+  </div>
+
+  {/* Card 4 - Security Microservice */}
+  <div
+      className="block mx-5 relative p-0.5 bg-no-repeat bg-[length:100%_100%] w-full sm:w-80 md:w-1/2 lg:w-[22rem]"
+      style={style}
+    data-aos="fade-up"
+  >
+    <div className="relative z-2 flex flex-col h-[250px] p-4 md:p-[2.4rem] pointer-events-none">
+      <h5 className="mb-1 -mt-0 sm:-mt-0 md:-mt-5 lg:-mt-0 text-lg md:text-xl md:mb-3">Security Microservice</h5>
+      <p className="mb-1 lg:mb-4 text-justify text-n-3">Application security with JWT bearer token support for multi-application deployment.</p>
+      <div className="flex items-center mt-auto">
+        <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+          View Security Repo
+        </p>
+        <Arrow />
+      </div>
+    </div>
+    <div className="absolute inset-0.5 bg-n-8" style={{ clipPath: "url(#benefits)" }}>
+      <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+        <img src={a4} width={380} height={362} className="w-full h-full object-cover" />
+      </div>
+    </div>
+    <ClipPath />
+  </div>
 
 </div>
 
