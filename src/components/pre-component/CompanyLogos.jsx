@@ -17,8 +17,20 @@ const CompanyLogos = ({ className }) => {
   }, []);
 
   return (
-    <div className={className}>
-     <div className="bg-[#00000065] h-auto sm:h-40 flex flex-col sm:flex-row items-center justify-between w-full rounded-3xl p-4" data-aos="fade-up">
+    <div>
+ 
+
+ <div className="flex mt-28 justify-around items-center lg:flex hidden">
+  <img src={mongodb} width={134} height={28} alt="MongoDB Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
+  <img src={ele} width={134} height={28} alt="Elephant Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
+  <img src={oracle} width={134} height={28} alt="Oracle Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
+  <img src={sql} width={70} height={28} alt="SQL Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
+  <img src={sqllite} width={70} height={28} alt="SQLite Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
+</div>
+
+
+
+      <div className="bg-[#00000065] h-auto sm:h-40 flex flex-col sm:flex-row items-center justify-between w-full rounded-3xl p-4" data-aos="fade-up">
   <h1 className="text-left text-2xl sm:text-3xl font-bold font-mono">
     Open Source
   </h1>
@@ -30,14 +42,6 @@ const CompanyLogos = ({ className }) => {
   </h5>
 </div>
 
-
-      <div className="flex mt-28 justify-around items-center">
-        <img src={mongodb} width={134} height={28} alt="MongoDB Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
-        <img src={ele} width={134} height={28} alt="Elephant Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
-        <img src={oracle} width={134} height={28} alt="Oracle Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
-        <img src={sql} width={70} height={28} alt="SQL Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
-        <img src={sqllite} width={70} height={28} alt="SQLite Logo" className="transition-transform duration-700 hover:scale-110" data-aos="zoom-in" />
-      </div>
     </div>
   );
 };

@@ -49,7 +49,7 @@ export const navigation = [
   
   {
     id: "0",
-    title: "Home",
+    title: "Overview",
     url: "/",
   },
   {

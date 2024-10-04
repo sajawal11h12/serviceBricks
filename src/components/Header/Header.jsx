@@ -1,7 +1,7 @@
-import { useLocation , Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import bricksLogo  from "../../assets/bricksLogo.png";
+import bricksLogo from "../../assets/bricksLogo.png";
 import { navigation } from "../../constants";
 import Button from "../pre-component/Button";
 import MenuSvg from "../../assets/svg/MenuSvg";
@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
@@ -45,21 +45,24 @@ const Header = () => {
             openNavigation ? "flex" : "hidden"
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+        <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
+
             {navigation.map((item) => (
               <Link
                 key={item.id}
                 to={item.url}
                 onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                className={`block relative font-code text-2xl uppercase text-n-1 transition-all duration-300 hover:text-color-1 lg:text-xs lg:font-semibold ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-4 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                } ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1"
-                } lg:leading-5 lg:hover:text-n-1/50 xl:px-4`}
+                } lg:leading-5 lg:hover:text-n-1/50 xl:px-4 group`}
               >
                 {item.title}
+                {/* Adjust the underline width based on text */}
+                <span className="absolute left-2 bottom-0 inline-block w-full max-w-[80%] h-0.5 bg-[#af3aaf88] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
               </Link>
             ))}
           </div>
@@ -69,7 +72,7 @@ const Header = () => {
 
         <Link
           to="/signup"
-          className="button hidden mr-8 text-n-1 transition-colors hover:text-n-1/50 lg:block"
+          className="button hidden mr-8 text-n-1 justify-evenly"
         >
           Register
         </Link>
