@@ -72,7 +72,7 @@ const Header = () => {
 
         <Link
           to="/signup"
-          className="button  mr-8 text-[white] justify-evenly"
+          className="button hidden lg:flex  mr-8 text-[white] justify-evenly"
         >
           Register
         </Link>
