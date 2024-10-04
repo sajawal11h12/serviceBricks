@@ -54,11 +54,11 @@ const Header = () => {
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-all duration-300 hover:text-color-1 lg:text-xs lg:font-semibold ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } ${
+                } px-4 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1"
-                } lg:leading-5 lg:hover:text-n-1/50 xl:px-4 group`}
+                } lg:leading-5 lg:hover:text-n-1/50 xl:px-3 group`}
               >
                 {item.title}
                 {/* Adjust the underline width based on text */}
@@ -72,7 +72,7 @@ const Header = () => {
 
         <Link
           to="/signup"
-          className="button hidden mr-8 text-n-1 justify-evenly"
+          className="button  mr-8 text-[white] justify-evenly"
         >
           Register
         </Link>
