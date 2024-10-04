@@ -62,7 +62,7 @@ const Header = () => {
               >
                 {item.title}
                 {/* Adjust the underline width based on text */}
-                <span className="absolute left-2 bottom-0 inline-block w-full max-w-[80%] h-0.5 bg-[#af3aaf88] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                {/* <span className="absolute left-2 bottom-0 inline-block w-full max-w-[80%] h-0.5 bg-[#af3aaf88] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span> */}
               </Link>
             ))}
           </div>
