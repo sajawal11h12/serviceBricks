@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import ButtonGradient from "../../assets/svg/ButtonGradient";
-import './price.css'; 
+// import './price.css'; 
 import AOS from "aos";
 import "aos/dist/aos.css";import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -83,16 +83,17 @@ Code Generation Subscription Plans
       </div>
     </Section>
 
-    <div className="mx-6 flex flex-col  items-center justify-center">
+    <div className=" -mx-6 sm:-mx-10 md:mx-6 flex flex-col  items-center justify-center">
       <h2 className="text-center text-white underline my-7 text-3xl">
       Compare Plans
       </h2>
-      <div class="container  flex items-center justify-center   my-4">
-      
-        <table class="   shadow-md  overflow-hidden ">
+      {/* <div class="container overflow-scroll  md:overflow-scroll lg:overflow-hidden flex items-center justify-center   my-4"> */}
+      <div className="container overflow-x-auto lg:overflow-hidden flex items-center justify-center my-4">
+       
+        <table class="    shadow-md   ">
             <thead class="border-b">
                 <tr>
-                    <th class="p-4  text-left">Feature</th>
+                    <th class="  p-4  text-left">Feature</th>
                     <th class="p-4  text-left">Free</th>
                     <th class="p-4  text-left">Individual/Non-Profit</th>
                     <th class="p-4  text-left">Business</th>

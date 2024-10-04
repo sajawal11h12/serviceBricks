@@ -5,7 +5,7 @@ import Tagline from "./Tagline";
 import { roadmap } from "../../constants";
 import { check2, grid, loading1 } from "../../assets";
 import { Gradient } from "../design/Roadmap";
-
+import {Link} from "react-router-dom"
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
     <div className="container md:pb-10">
@@ -76,7 +76,8 @@ const Roadmap = () => (
       </div>
 
       <div className="flex justify-center mt-8 md:mt-10 xl:mt-12">
-        <Button href="/roadmap">Get Started</Button>
+        <Button >  <Link to="getstarted">Get Started</Link>
+           </Button>
       </div>
     </div>
   </Section>

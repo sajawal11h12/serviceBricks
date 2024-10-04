@@ -8,7 +8,7 @@ import Button from "./Button";
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
 import { useEffect } from 'react'; // Import useEffect
-
+import {Link} from 'react-router-dom'
 const Benefits = () => {
   useEffect(() => {
     AOS.init({
@@ -93,7 +93,7 @@ const Benefits = () => {
         </div>
       </div>
       <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button>Explore more</Button>
+        <Button> <Link to="features">Explore more</Link></Button>
       </div>
     </Section>
   );

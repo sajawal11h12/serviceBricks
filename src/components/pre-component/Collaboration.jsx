@@ -2,7 +2,7 @@ import { brainwaveSymbol, check, service2 } from "../../assets";
 import { collabApps, collabContent, collabText } from "../../constants";
 import brickslogomini from '../../assets/brickslogomini.png'
 import { LeftCurve, RightCurve } from "../design/Collaboration";
-
+import { Link} from "react-router-dom"
 import Button from "./Button";
 import Section from "./Section";
 import AOS from 'aos'; // Import AOS
@@ -38,7 +38,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button data-aos="fade-right">Try it now</Button>
+          <Button data-aos="fade-right"> <Link to="login"> Try it now</Link> </Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4" data-aos="fade-left">

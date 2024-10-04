@@ -11,7 +11,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import service4 from '../../assets/service4.png'
-
+import {Link} from 'react-router-dom'
 const Hero = () => {
   const parallaxRef = useRef(null);
 
@@ -59,8 +59,8 @@ const Hero = () => {
           >
             ServiceBricks is your cornerstone for building a robust microservices foundation. It is a powerful open-source platform designed to streamline the development, deployment, and maintenance of distributed systems.
           </p>
-          <Button href="/pricing" white>
-            Get started
+          <Button  white>
+<Link to='getstarted'>Get started </Link>            
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">

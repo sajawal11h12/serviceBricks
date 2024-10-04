@@ -4,7 +4,7 @@ import Heading from "./Heading";
 import PricingList from "./PricingList";
 import { LeftLine, RightLine } from "../design/Pricing";
 import Button from "./Button";
-
+import {Link} from "react-router-dom"
 const Pricing = () => {
   return (
     <Section className="overflow-hidden" id="pricing">
@@ -33,7 +33,7 @@ const Pricing = () => {
           title="open source, use forever"
         />
         <div className="flex justify-center items-center mb-28">
-  <Button>Get Started with Free!</Button>
+  <Button> <Link to="login">Get Started with Free!</Link></Button>
 </div>
 
         <div className="relative">
