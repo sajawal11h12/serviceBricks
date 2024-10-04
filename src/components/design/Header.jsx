@@ -34,13 +34,12 @@ export const HamburgerMenu = () => {
       <div className="absolute inset-0 opacity-[.03]">
         <img
           className="w-full h-full object-cover"
-          src={background}
+          src={""}
           width={688}
           height={953}
           alt="Background"
         />
       </div>
-
       <Rings />
 
       <SideLines />
