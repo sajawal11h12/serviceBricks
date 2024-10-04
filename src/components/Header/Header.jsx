@@ -163,7 +163,10 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <Link to="/signup" className="button mr-8 text-[white] justify-evenly">
+        <Link
+          to="/signup"
+          className="button hidden lg:flex  mr-8 text-[white] justify-evenly"
+        >
           Register
         </Link>
         <Button className="hidden lg:flex">
