@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import Header from '../Header/Header.jsx';
@@ -7,59 +9,23 @@ import Button from '../pre-component/Button.jsx';
 import LoginAnimation from '../../assets/LoginAnimation.json'; // Assuming the correct path to the Lottie file
 import './Styles.css';
 import ButtonGradient from "../../assets/svg/ButtonGradient";
-
+import { useForm } from 'react-hook-form';
 const Signup = () => {
-  // State Management
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [isAgreed, setIsAgreed] = useState(false);
-  const [errors, setErrors] = useState({ email: '', password: '', confirmPassword: '', isAgreed: '' });
+  const {
+    register,
+    watch,
 
-  const validateForm = () => {
-    let isValid = true;
-    const newErrors = { email: '', password: '', confirmPassword: '', isAgreed: '' };
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
 
-    // Email validation
-    if (!email) {
-      newErrors.email = 'Email is required';
-      isValid = false;
-    }
-
-    // Password validation
-    if (!password) {
-      newErrors.password = 'Password is required';
-      isValid = false;
-    }
-
-    // Confirm password validation
-    if (password !== confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-      isValid = false;
-    }
-
-    // Terms and conditions validation
-    if (!isAgreed) {
-      newErrors.isAgreed = 'You must agree to the Terms of Use and Privacy Policy';
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
+  const onSubmit = (data) => {
+    console.log('Email:', data.email);
+    console.log('Password:', data.password);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      console.log('Email:', email);
-      console.log('Password:', password);
-      // Continue with form submission or API call
-    }
-  };
-
   return (
     <>
-      <Header /> {/* Adding Header component */}
+      <Header /> 
       <div className="mt-16 min-h-screen bg-transparent flex items-center justify-center py-10">
         <div className="flex w-full max-w-7xl bg-transparent rounded-3xl shadow-[10px] overflow-hidden neon-border-purple"> 
           {/* Neon border applied to this main div */}
@@ -77,93 +43,101 @@ const Signup = () => {
           <div className="w-full md:w-1/2 p-10 bg-white">
             <h1 className="text-3xl font-bold text-[#1a1a2ec0] mb-2 text-center">Register Your Free Account!</h1>
             <h2 className="text-3xl font-bold text-[#1a1a2ec2] mb-8 text-center">Create an Account</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Email Input */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-gray-700" htmlFor="email">
-                  Email
-                </label>
-                <div className="flex items-center border border-gray-300 rounded-lg w-full py-3 px-4 shadow-sm bg-transparent neon-border">
-                  <FaEnvelope className="text-gray-400 mr-3" />
-                  <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-grow outline-none text-gray-700 focus:ring-0 focus:outline-none bg-transparent placeholder-gray-400"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-                {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
-              </div>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 
-              {/* Password Input */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-gray-700" htmlFor="password">
-                  Password
-                </label>
-                <div className="flex items-center border border-gray-300 rounded-lg w-full py-3 px-4 shadow-sm bg-transparent neon-border">
-                  <FaLock className="text-gray-400 mr-3" />
-                  <input
-                    type="password"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="flex-grow outline-none text-gray-700 focus:ring-0 focus:outline-none bg-transparent placeholder-gray-400"
-                    placeholder="Enter your password"
-                    required
-                  />
-                </div>
-                {errors.password && <p className="text-red-500 text-sm mt-2">{errors.password}</p>}
-              </div>
+{/* Email Input */}
+<div>
+  <label className="block text-sm font-semibold mb-2 text-gray-700" htmlFor="email">
+    Email
+  </label>
+  <div className="flex items-center border border-gray-300 rounded-lg w-full py-3 px-4 shadow-sm bg-transparent neon-border">
+    <FaEnvelope className="text-gray-400 mr-3" />
+    <input
+      type="email"
+      id="email"
+      {...register('email', {
+        required: 'Email is required',
+        pattern: {
+          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+          message: 'Invalid email format'
+        }
+      })}
+      className="flex-grow outline-none text-gray-700 focus:ring-0 focus:outline-none bg-transparent placeholder-gray-400"
+      placeholder="Enter your email"
+    />
+  </div>
+  {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email.message}</p>}
+</div>
 
-              {/* Confirm Password Input */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-gray-700" htmlFor="confirmPassword">
-                  Confirm Password
-                </label>
-                <div className="flex items-center border border-gray-300 rounded-lg w-full py-3 px-4 shadow-sm bg-transparent neon-border">
-                  <FaLock className="text-gray-400 mr-3" />
-                  <input
-                    type="password"
-                    id="confirmPassword"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="flex-grow outline-none text-gray-700 focus:ring-0 focus:outline-none bg-transparent placeholder-gray-400"
-                    placeholder="Confirm your password"
-                    required
-                  />
-                </div>
-                {errors.confirmPassword && <p className="text-red-500 text-sm mt-2">{errors.confirmPassword}</p>}
-              </div>
+{/* Password Input */}
+<div>
+  <label className="block text-sm font-semibold mb-2 text-gray-700" htmlFor="password">
+    Password
+  </label>
+  <div className="flex items-center border border-gray-300 rounded-lg w-full py-3 px-4 shadow-sm bg-transparent neon-border">
+    <FaLock className="text-gray-400 mr-3" />
+    <input
+      type="password"
+      id="password"
+      {...register('password', {
+        required: 'Password is required',
+        pattern: {
+          value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+          message: 'Password must be at least 8 characters long and contain a mix of uppercase, lowercase, numbers, and special characters'
+        }
+      })}
+      className="flex-grow outline-none text-gray-700 focus:ring-0 focus:outline-none bg-transparent placeholder-gray-400"
+      placeholder="Enter your password"
+    />
+  </div>
+  {errors.password && <p className="text-red-500 text-sm mt-2">{errors.password.message}</p>}
+</div>
 
-              {/* Checkbox for Terms and Conditions */}
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  checked={isAgreed}
-                  onChange={() => setIsAgreed(!isAgreed)}
-                  className="mr-2"
-                  required
-                />
-                <label htmlFor="terms" className="text-sm text-gray-700">
-                  I agree to the <a href="#" className="text-[#009ca0]">Terms of Use</a> and <a href="#" className="text-[#009ca0]">Privacy Policy</a>
-                </label>
-              </div>
-              {errors.isAgreed && <p className="text-red-500 text-sm mt-2">{errors.isAgreed}</p>}
+{/* Confirm Password Input */}
+<div>
+  <label className="block text-sm font-semibold mb-2 text-gray-700" htmlFor="confirmPassword">
+    Confirm Password
+  </label>
+  <div className="flex items-center border border-gray-300 rounded-lg w-full py-3 px-4 shadow-sm bg-transparent neon-border">
+    <FaLock className="text-gray-400 mr-3" />
+    <input
+      type="password"
+      id="confirmPassword"
+      {...register('confirmPassword', {
+        required: 'Please confirm your password',
+        validate: (value) => value === watch('password') || 'Passwords do not match'
+      })}
+      className="flex-grow outline-none text-gray-700 focus:ring-0 focus:outline-none bg-transparent placeholder-gray-400"
+      placeholder="Confirm your password"
+    />
+  </div>
+  {errors.confirmPassword && <p className="text-red-500 text-sm mt-2">{errors.confirmPassword.message}</p>}
+</div>
 
-              {/* Submit Button */}
-              <div className="flex justify-center">
-                <Button
-                  className="w-40 "
-                >
-                 <span className='text-black'> Sign Up</span>
-                </Button>
-              </div>
-            </form>
-          </div>
+{/* Checkbox for Terms and Conditions */}
+<div className="flex items-center">
+  <input
+    type="checkbox"
+    id="terms"
+    {...register('terms', {
+      required: 'You must agree to the Terms of Use and Privacy Policy'
+    })}
+    className="mr-2"
+  />
+  <label htmlFor="terms" className="text-sm text-gray-700">
+    I agree to the <a href="#" className="text-[#009ca0]">Terms of Use</a> and <a href="#" className="text-[#009ca0]">Privacy Policy</a>
+  </label>
+</div>
+{errors.terms && <p className="text-red-500 text-sm mt-2">{errors.terms.message}</p>}
+
+{/* Submit Button */}
+<div className="flex justify-center">
+  <Button className="w-40">
+    <span className='text-black'> Sign Up</span>
+  </Button>
+</div>
+</form>
+      </div>
         </div>
       </div>
       <ButtonGradient />
