@@ -1,3 +1,4 @@
+
 import { useLocation, Link } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
@@ -9,7 +10,7 @@ import { HamburgerMenu } from "../design/Header";
 import { useState } from "react";
 
 const Header = () => {
-  const pathname = useLocation();
+  const pathname = useLocation().pathname; // Get the current pathname
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
@@ -31,8 +32,8 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed  top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-        openNavigation ? "bg-n-8 " : "bg-n-8/90 backdrop-blur-sm"
+      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
@@ -45,24 +46,21 @@ const Header = () => {
             openNavigation ? "flex overflow-scroll overflow-x-hidden" : "hidden"
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-        <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
-
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
             {navigation.map((item) => (
               <Link
                 key={item.id}
                 to={item.url}
                 onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-all duration-300 hover:text-color-1 lg:text-xs lg:font-semibold ${
+                className={`block relative font-code text-2xl uppercase transition-all duration-300 lg:text-xs lg:font-semibold px-4 py-6 md:py-8 lg:-mr-0.25 lg:leading-5 xl:px-3 group ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-4 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1"
-                } lg:leading-5 lg:hover:text-n-1/50 xl:px-3 group`}
+                } ${
+                  pathname === item.url
+                    ? "text-color-1" 
+                    : "text-n-1 hover:text-color-1" 
+                }`}
               >
                 {item.title}
-                {/* Adjust the underline width based on text */}
-                {/* <span className="absolute left-2 bottom-0 inline-block w-full max-w-[80%] h-0.5 bg-[#af3aaf88] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span> */}
               </Link>
             ))}
           </div>
@@ -76,12 +74,9 @@ const Header = () => {
         >
           Register
         </Link>
-        <Button className="hidden lg:flex" >
-         <Link  to="/login"
-         > 
-         Sign in
-         </Link>
-         </Button>
+        <Button className="hidden lg:flex">
+          <Link to="/login">Sign in</Link>
+        </Button>
 
         <Button
           className="ml-auto lg:hidden"

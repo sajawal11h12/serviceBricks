@@ -9,23 +9,23 @@ import Button from '../pre-component/Button.jsx';
 import ButtonGradient from "../../assets/svg/ButtonGradient";
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
-
+import { useForm } from 'react-hook-form';
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
+  const onSubmit = (data) => {
+    console.log('Form Data:', data);
+  };
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Remember Me:', rememberMe);
-  };
-
+  
   return (
     <>
       <Header />
@@ -49,7 +49,7 @@ const Register = () => {
               Sign In
             </h1>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
               {/* Email Input */}
               <div className="mb-4">
                 <label className="block text-[#1a1a2e] text-sm font-semibold mb-1" htmlFor="email">
@@ -60,13 +60,18 @@ const Register = () => {
                   <input
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-grow appearance-none outline-none bg-transparent text-gray-800 placeholder-gray-400 focus:ring-0"
+                    {...register('email', {
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: 'Enter a valid email address',
+                      },
+                    })}
+                    className={`flex-grow appearance-none outline-none bg-transparent text-gray-800 placeholder-gray-400 focus:ring-0 ${errors.email ? 'border-red-500' : ''}`}
                     placeholder="Enter your email"
-                    required
                   />
                 </div>
+                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
               </div>
 
               {/* Password Input */}
@@ -79,23 +84,30 @@ const Register = () => {
                   <input
                     type="password"
                     id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="flex-grow appearance-none outline-none bg-transparent text-gray-800 placeholder-gray-400 focus:ring-0"
+                    {...register('password', {
+                      required: 'Password is required',
+                      minLength: {
+                        value: 8,
+                        message: 'Password must be at least 8 characters',
+                      },
+                      pattern: {
+                        value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                        message: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character',
+                      },
+                    })}
+                     className={`flex-grow appearance-none outline-none bg-transparent text-gray-800 placeholder-gray-400 focus:ring-0 ${errors.password ? 'border-red-500' : ''}`}
                     placeholder="Enter your password"
-                    required
                   />
                 </div>
+                {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
               </div>
 
-              {/* Remember Me and Forgot Password */}
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="rememberMe"
-                    checked={rememberMe}
-                    onChange={() => setRememberMe((prev) => !prev)}
+                    {...register('rememberMe')}
                     className="mr-2 text-[#1a1a2e] focus:ring-[#1a1a2e] rounded"
                   />
                   <label htmlFor="rememberMe" className="text-sm text-gray-700">
@@ -118,7 +130,6 @@ const Register = () => {
               <ButtonGradient />
             </form>
 
-            {/* Registration Prompt */}
             <div className="mt-4 text-center text-gray-600">
               <p>No Account? <span className="text-[#1a1a2e] font-semibold">Register Here!</span></p>
               <p className="text-sm mt-1">Registration takes less than a minute but gives you access to your free online account!</p>
@@ -136,3 +147,6 @@ const Register = () => {
 };
 
 export default Register;
+  
+
+
