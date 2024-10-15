@@ -28,7 +28,7 @@ const Register = () => {
       <Header />
       <div className="min-h-screen font-poppins flex flex-col lg:flex-row bg-[#0000003a]">
         {/* Left Section - Graphic and Welcome Text */}
-        <div className="  bg-[#ffffff0e] flex-1 flex flex-col items-center text-white p-6 h-screen neon-border" data-aos="fade-down" data-aos-delay="300">
+        <div className=" mt-7 bg-[#ffffff0e] flex-1 flex flex-col items-center text-white p-6 h-screen neon-border" data-aos="fade-down" data-aos-delay="300">
           <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#566fdf] to-[purple] tracking-wider mt-20 text-center drop-shadow-lg">
             Welcome
           </h1>
@@ -45,13 +45,13 @@ const Register = () => {
         {/* Right Section - Sign In Form */}
         <div className="flex-1 flex justify-center items-center p-6 h-screen neon-border" data-aos="fade-left">
           <div className="  p-8 w-[500px] h-[600px] mt-24 rounded-2xl shadow-xl  transform transition-transform hover:scale-105" data-aos="zoom-in" data-aos-delay="600">
-            <h1 className="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#566fdf] to-[purple]" data-aos="fade-down">
+            <h1 className="mt-10  text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#566fdf] to-[purple]" data-aos="fade-down">
               Sign In
             </h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               {/* Email Input */}
-              <div className="mb-4" data-aos="fade-up" data-aos-delay="700">
+              <div className="mb-4">
                 <label className="block text-[#ffffffdc] text-sm font-semibold mb-1" htmlFor="email">
                   Email
                 </label>
@@ -75,7 +75,7 @@ const Register = () => {
               </div>
 
               {/* Password Input */}
-              <div className="mb-4" data-aos="fade-up" data-aos-delay="800">
+              <div className="mb-4" >
                 <label className="block text-[#ffffffdc] text-sm font-semibold mb-1" htmlFor="password">
                   Password
                 </label>
@@ -103,7 +103,7 @@ const Register = () => {
               </div>
 
               {/* Remember Me and Forgot Password */}
-              <div className="mb-4 flex items-center justify-between" data-aos="fade-up" data-aos-delay="900">
+              <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center">
                   <input
                     type="checkbox"
@@ -123,7 +123,7 @@ const Register = () => {
               </div>
 
               {/* Submit Button */}
-              <div className="flex items-center justify-center mb-4" data-aos="fade-up" data-aos-delay="1000">
+              <div className="flex items-center justify-center mb-4">
                 <Button>
                   <span className="text-white">Sign In</span>
                 </Button>
@@ -131,7 +131,7 @@ const Register = () => {
               <ButtonGradient />
             </form>
 
-            <div className="mt-4 text-center text-[#ffffffdc]" data-aos="fade-up" data-aos-delay="1100">
+            <div className="mt-4 text-center text-[#ffffffdc]" >
               <p>No Account? <span className="text-[#ffffffdc] font-semibold">Register Here!</span></p>
               <p className="text-sm mt-1 text-[#ffffffdc]">Registration takes less than a minute but gives you access to your free online account!</p>
               <Link to="/signup" className="inline-block mt-2 text-[#ffffffdc] hover:text-[#aab0b1] font-bold transition-colors duration-300">
