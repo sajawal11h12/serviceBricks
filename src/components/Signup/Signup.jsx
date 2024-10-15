@@ -27,7 +27,7 @@ const Signup = () => {
     <>
       <Header /> 
       <div className="mt-16 min-h-screen bg-transparent flex items-center justify-center py-10">
-        <div className="flex w-full max-w-7xl bg-transparent rounded-3xl shadow-[10px] overflow-hidden neon-border-purple"> 
+        <div className="flex w-full max-w-7xl  border border-purple-800"> 
           {/* Neon border applied to this main div */}
 
           {/* Left Section with Lottie Animation */}
